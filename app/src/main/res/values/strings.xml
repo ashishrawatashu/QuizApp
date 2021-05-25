@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="howMuchScore">1. How much score each question ?</string>
+    <string name="howMuchTime">2. Exam timing in (Sec)</string>
+    <string name="howManyQuestion">3. How many questions ?</string>
+    <string name="questionType">4. Question type</string>
+    <string name="mcq3">M.C.Q 3</string>
+    <string name="mcq4">M.C.Q 4</string>
+    <string name="createYourQuestion">Create your question ........</string>
+    <string name="selectLevel">3. Select level</string>
+    <string name="date">Date :</string>
+    <string name="time">Time :</string>
+    <string name="totalMarks">Max Marks :</string>
+    <string name="level">Level :</string>
+    <string name="logout"><u> Log Out </u></string>
+</resources>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    tools:context=".activity.TestSettingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/setting_TV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/nunito"
+            android:gravity="center"
+            android:text="SETTING"
+            android:textColor="@color/gray_2"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow_CV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_arrow_CV" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/back_arrow_CV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/light_grey_bg"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/back_arrow"
+                android:visibility="visible" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/question1_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/howMuchScore"
+        android:textColor="@color/gray_1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <RadioGroup
+        android:id="@+id/question1_RG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/question1_TV"
+        app:layout_constraintTop_toBottomOf="@id/question1_TV">
+
+        <RadioButton
+            android:id="@+id/radio_score_five_BT_for_question_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="5"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_score_ten_BT_for_question_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="10"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_score_fifteen_BT_for_question_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="15"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/question2_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/howMuchTime"
+        android:textColor="@color/gray_1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/question1_RG" />
+
+    <RadioGroup
+        android:id="@+id/question2_RG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/question1_TV"
+        app:layout_constraintTop_toBottomOf="@id/question2_TV">
+
+        <RadioButton
+            android:id="@+id/radio_time_five_BT_for_question_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="5"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_time_twenty_BT_for_question_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="20"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_time_thirty_BT_for_question_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="30"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question4_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/selectLevel"
+        android:textColor="@color/gray_1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/question3_RG" />
+
+    <RadioGroup
+        android:id="@+id/question4_RG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/question1_TV"
+        app:layout_constraintTop_toBottomOf="@id/question4_TV">
+
+        <RadioButton
+            android:id="@+id/level_one_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="1"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/level_two_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="2"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/level_three_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="3"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/level_four_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="4"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/level_five_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="5"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/question3_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/howManyQuestion"
+        android:textColor="@color/gray_1"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/question2_RG" />
+
+    <RadioGroup
+        android:id="@+id/question3_RG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/question1_TV"
+        app:layout_constraintTop_toBottomOf="@id/question3_TV">
+
+        <RadioButton
+            android:id="@+id/radio_five_BT_for_question_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="5"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_ten_BT_for_question_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="10"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_fifteen_BT_for_question_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="15"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/continue_BT"
+        style="@style/MatButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/nunito"
+        android:text="Save Setting"
+        android:textAllCaps="false"
+        android:textColor="@color/whiteColor"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroolView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

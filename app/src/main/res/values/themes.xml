@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QuizApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark"
+            >@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@color/whiteColor</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+
+
+    </style>
+
+    <style name="MatButton" parent="Theme.MaterialComponents">
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorPrimary">#69C51D</item>
+        <item name="colorOnSurface">@android:color/holo_orange_light</item>
+    </style>
+</resources>

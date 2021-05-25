@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    tools:context=".activity.AddQuestionActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/add_question_TV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/nunito"
+            android:gravity="center"
+            android:text="ADD QUESTION"
+            android:textColor="#4F4F4F"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_arrow_CV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_arrow_CV" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/back_arrow_CV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/light_grey_bg"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/back_arrow"
+                android:visibility="visible" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/continue_BT"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/add_question_ET"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:background="@drawable/list_background_grey"
+                android:fontFamily="@font/nunito"
+                android:gravity="top"
+                android:hint="@string/createYourQuestion"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15sp"
+                android:paddingTop="15sp"
+                app:layout_constraintEnd_toStartOf="@id/level_RG"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/level_RG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/level_one_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text="Level 1" />
+
+                <RadioButton
+                    android:id="@+id/level_two_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text="Level 2" />
+
+                <RadioButton
+                    android:id="@+id/level_three_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text="Level 3" />
+
+
+                <RadioButton
+                    android:id="@+id/level_four_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text="Level 4" />
+
+
+                <RadioButton
+                    android:id="@+id/level_five_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text="Level 5" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_question_ET">
+
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_option_one_RB"
+                        android:layout_marginTop="45dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"/>
+
+                    <RadioButton
+                        android:id="@+id/answer_option_two_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"/>
+
+
+                    <RadioButton
+                        android:id="@+id/answer_option_three_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"/>
+
+
+                    <RadioButton
+                        android:id="@+id/answer_option_four_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"/>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/mcq_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/toolbar"
+                    app:layout_constraintTop_toBottomOf="@id/add_question_ET">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:text="OPTIONS"
+                        android:textColor="@color/gray_1"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/option_one_ET"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/list_background_grey"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:hint="Option A" />
+
+                    <EditText
+                        android:id="@+id/option_two_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/list_background_grey"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:hint="Option B" />
+
+
+                    <EditText
+                        android:id="@+id/option_three_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/list_background_grey"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:hint="Option C" />
+
+
+                    <EditText
+                        android:id="@+id/option_four_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/list_background_grey"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:hint="Option D" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/continue_BT"
+        style="@style/MatButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/nunito"
+        android:text="Save Question"
+        android:textAllCaps="false"
+        android:textColor="@color/whiteColor"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroolView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
